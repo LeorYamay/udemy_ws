@@ -1,0 +1,2 @@
+udemy_cpp_pkg
+-DCATKIN_DEVEL_PREFIX=/home/leory/Ros_WS/udemy_ws/devel -DCMAKE_INSTALL_PREFIX=/home/leory/Ros_WS/udemy_ws/install -G Unix Makefiles
