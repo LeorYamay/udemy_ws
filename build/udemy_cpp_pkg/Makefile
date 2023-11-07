@@ -80,6 +80,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -91,16 +101,6 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # Special rule for the target test
 test:
@@ -241,6 +241,21 @@ rosgraph_msgs_generate_messages_lisp: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_gen
 rosgraph_msgs_generate_messages_lisp/fast:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/publisher.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/publisher.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/publisher.dir/rule
+
+# Convenience name for target.
+publisher: udemy_cpp_pkg/CMakeFiles/publisher.dir/rule
+
+.PHONY : publisher
+
+# fast build rule for target.
+publisher/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/build
+.PHONY : publisher/fast
 
 # Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
@@ -542,6 +557,33 @@ roscpp_generate_messages_eus/fast:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/build.make udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
+src/publisher.o: src/publisher.cpp.o
+
+.PHONY : src/publisher.o
+
+# target to build an object file
+src/publisher.cpp.o:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/src/publisher.cpp.o
+.PHONY : src/publisher.cpp.o
+
+src/publisher.i: src/publisher.cpp.i
+
+.PHONY : src/publisher.i
+
+# target to preprocess a source file
+src/publisher.cpp.i:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/src/publisher.cpp.i
+.PHONY : src/publisher.cpp.i
+
+src/publisher.s: src/publisher.cpp.s
+
+.PHONY : src/publisher.s
+
+# target to generate assembly for a file
+src/publisher.cpp.s:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/src/publisher.cpp.s
+.PHONY : src/publisher.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -550,11 +592,13 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... publisher"
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
@@ -563,7 +607,6 @@ help:
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... list_install_components"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_cpp"
@@ -580,6 +623,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rebuild_cache"
+	@echo "... src/publisher.o"
+	@echo "... src/publisher.i"
+	@echo "... src/publisher.s"
 .PHONY : help
 
 
