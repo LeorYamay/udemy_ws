@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/leory/Ros_WS/udemy_ws/src
+CMAKE_SOURCE_DIR = /home/leory/udemy_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/leory/Ros_WS/udemy_ws/build
+CMAKE_BINARY_DIR = /home/leory/udemy_ws/build
 
 # Utility rule file for std_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build: std_msgs_gene
 .PHONY : udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 
 udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	cd /home/leory/Ros_WS/udemy_ws/build/udemy_cpp_pkg && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/leory/udemy_ws/build/udemy_cpp_pkg && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 
 udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend:
-	cd /home/leory/Ros_WS/udemy_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leory/Ros_WS/udemy_ws/src /home/leory/Ros_WS/udemy_ws/src/udemy_cpp_pkg /home/leory/Ros_WS/udemy_ws/build /home/leory/Ros_WS/udemy_ws/build/udemy_cpp_pkg /home/leory/Ros_WS/udemy_ws/build/udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/leory/udemy_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leory/udemy_ws/src /home/leory/udemy_ws/src/udemy_cpp_pkg /home/leory/udemy_ws/build /home/leory/udemy_ws/build/udemy_cpp_pkg /home/leory/udemy_ws/build/udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/leory/Ros_WS/udemy_ws/src/udemy_cpp_pkg
+# Install script for directory: /home/leory/udemy_ws/src/udemy_cpp_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/leory/Ros_WS/udemy_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/leory/udemy_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leory/Ros_WS/udemy_ws/build/udemy_cpp_pkg/catkin_generated/installspace/udemy_cpp_pkg.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/leory/udemy_ws/build/udemy_cpp_pkg/catkin_generated/installspace/udemy_cpp_pkg.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/udemy_cpp_pkg/cmake" TYPE FILE FILES
-    "/home/leory/Ros_WS/udemy_ws/build/udemy_cpp_pkg/catkin_generated/installspace/udemy_cpp_pkgConfig.cmake"
-    "/home/leory/Ros_WS/udemy_ws/build/udemy_cpp_pkg/catkin_generated/installspace/udemy_cpp_pkgConfig-version.cmake"
+    "/home/leory/udemy_ws/build/udemy_cpp_pkg/catkin_generated/installspace/udemy_cpp_pkgConfig.cmake"
+    "/home/leory/udemy_ws/build/udemy_cpp_pkg/catkin_generated/installspace/udemy_cpp_pkgConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/udemy_cpp_pkg" TYPE FILE FILES "/home/leory/Ros_WS/udemy_ws/src/udemy_cpp_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/udemy_cpp_pkg" TYPE FILE FILES "/home/leory/udemy_ws/src/udemy_cpp_pkg/package.xml")
 endif()
 
