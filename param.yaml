@@ -1,0 +1,11 @@
+rosdistro: 'noetic
+
+  '
+roslaunch:
+  uris:
+    host_ubuntu__35053: http://ubuntu:35053/
+rosversion: '1.16.0
+
+  '
+run_id: 15e2e136-8066-11ee-abe6-abd2235b6535
+wheel_radius: 0.12
