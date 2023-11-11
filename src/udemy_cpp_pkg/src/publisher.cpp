@@ -9,8 +9,8 @@ int main(int argc, char ** argv)
 
     ros::Publisher hello_world_pub = nod_handle.advertise<std_msgs::String>("hello_world",10);
     int counter =0;
-    ros::Rate pub_rate(5);
-    ROS_INFO("Publisher Node Started");
+    ros::Rate pub_rate(5); //refresh rate
+    ROS_INFO("Publisher Node Started"); //to terminal
     while(ros::ok())
     {
         std_msgs::String msg;

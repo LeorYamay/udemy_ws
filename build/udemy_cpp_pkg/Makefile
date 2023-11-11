@@ -102,6 +102,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -123,17 +134,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -378,6 +378,21 @@ rosgraph_msgs_generate_messages_nodejs/fast:
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/build.make udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
@@ -528,6 +543,21 @@ geometry_msgs_generate_messages_eus/fast:
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
+
+# Convenience name for target.
+subscriber: udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
+
+.PHONY : subscriber
+
+# fast build rule for target.
+subscriber/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/build
+.PHONY : subscriber/fast
+
+# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
@@ -541,21 +571,6 @@ rosgraph_msgs_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_gene
 rosgraph_msgs_generate_messages_cpp/fast:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/build.make udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
 
 src/publisher.o: src/publisher.cpp.o
 
@@ -584,6 +599,33 @@ src/publisher.cpp.s:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/src/publisher.cpp.s
 .PHONY : src/publisher.cpp.s
 
+src/subscriber.o: src/subscriber.cpp.o
+
+.PHONY : src/subscriber.o
+
+# target to build an object file
+src/subscriber.cpp.o:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/src/subscriber.cpp.o
+.PHONY : src/subscriber.cpp.o
+
+src/subscriber.i: src/subscriber.cpp.i
+
+.PHONY : src/subscriber.i
+
+# target to preprocess a source file
+src/subscriber.cpp.i:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/src/subscriber.cpp.i
+.PHONY : src/subscriber.cpp.i
+
+src/subscriber.s: src/subscriber.cpp.s
+
+.PHONY : src/subscriber.s
+
+# target to generate assembly for a file
+src/subscriber.cpp.s:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/src/subscriber.cpp.s
+.PHONY : src/subscriber.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -608,6 +650,8 @@ help:
 	@echo "... roscpp_generate_messages_py"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... rebuild_cache"
+	@echo "... roscpp_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
@@ -618,14 +662,16 @@ help:
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... subscriber"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... rebuild_cache"
 	@echo "... src/publisher.o"
 	@echo "... src/publisher.i"
 	@echo "... src/publisher.s"
+	@echo "... src/subscriber.o"
+	@echo "... src/subscriber.i"
+	@echo "... src/subscriber.s"
 .PHONY : help
 
 

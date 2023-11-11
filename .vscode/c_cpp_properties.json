@@ -8,7 +8,8 @@
             "includePath": [
                 "/opt/ros/noetic/include/**",
                 "/home/leory/udemy_ws/src/udemy_cpp_pkg/include/**",
-                "/usr/include/**"
+                "/usr/include/**",
+                "/opt/ros/noetic/include"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",
