@@ -137,6 +137,8 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 
 # Recursive "all" directory target.
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/publisher.dir/all
+udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/speed_calc.dir/all
+udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/all
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/subscriber.dir/all
 
 .PHONY : udemy_cpp_pkg/all
@@ -155,11 +157,13 @@ udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_li
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/publisher.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_py.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/speed_calc.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
@@ -172,8 +176,8 @@ udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/subscriber.dir/clean
-udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 .PHONY : udemy_cpp_pkg/clean
 
@@ -320,7 +324,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=3,4 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -347,7 +351,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=1,2 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=3,4 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -374,7 +378,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=7,8 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -401,7 +405,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=5,6 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=7,8 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -563,7 +567,7 @@ udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
 udemy_cpp_pkg/CMakeFiles/publisher.dir/all:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=9,10 "Built target publisher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=11,12 "Built target publisher"
 .PHONY : udemy_cpp_pkg/CMakeFiles/publisher.dir/all
 
 # Build rule for subdir invocation for target.
@@ -636,6 +640,33 @@ std_msgs_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messa
 udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 .PHONY : udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+.PHONY : udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+.PHONY : udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# clean rule for target.
+udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Target rules for target udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir
@@ -771,6 +802,33 @@ std_msgs_generate_messages_lisp: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_mess
 udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 .PHONY : udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target udemy_cpp_pkg/CMakeFiles/speed_calc.dir
+
+# All Build rule for target.
+udemy_cpp_pkg/CMakeFiles/speed_calc.dir/all:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/depend
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=13,14 "Built target speed_calc"
+.PHONY : udemy_cpp_pkg/CMakeFiles/speed_calc.dir/all
+
+# Build rule for subdir invocation for target.
+udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/speed_calc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+.PHONY : udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
+
+# Convenience name for target.
+speed_calc: udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
+
+.PHONY : speed_calc
+
+# clean rule for target.
+udemy_cpp_pkg/CMakeFiles/speed_calc.dir/clean:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/clean
+.PHONY : udemy_cpp_pkg/CMakeFiles/speed_calc.dir/clean
 
 #=============================================================================
 # Target rules for target udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
@@ -1097,13 +1155,40 @@ udemy_cpp_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
 .PHONY : udemy_cpp_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
+# Target rules for target udemy_cpp_pkg/CMakeFiles/RPM_pub.dir
+
+# All Build rule for target.
+udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/all:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build.make udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/depend
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build.make udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=1,2 "Built target RPM_pub"
+.PHONY : udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/all
+
+# Build rule for subdir invocation for target.
+udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+.PHONY : udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule
+
+# Convenience name for target.
+RPM_pub: udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule
+
+.PHONY : RPM_pub
+
+# clean rule for target.
+udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/clean:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build.make udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/clean
+.PHONY : udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/clean
+
+#=============================================================================
 # Target rules for target udemy_cpp_pkg/CMakeFiles/subscriber.dir
 
 # All Build rule for target.
 udemy_cpp_pkg/CMakeFiles/subscriber.dir/all:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=11,12 "Built target subscriber"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=15,16 "Built target subscriber"
 .PHONY : udemy_cpp_pkg/CMakeFiles/subscriber.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1122,33 +1207,6 @@ subscriber: udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
 udemy_cpp_pkg/CMakeFiles/subscriber.dir/clean:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/clean
 .PHONY : udemy_cpp_pkg/CMakeFiles/subscriber.dir/clean
-
-#=============================================================================
-# Target rules for target udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
-.PHONY : udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# clean rule for target.
-udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

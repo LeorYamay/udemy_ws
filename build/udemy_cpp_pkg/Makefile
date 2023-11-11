@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/leory/udemy_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -90,6 +78,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -102,17 +101,6 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -124,16 +112,28 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : edit_cache/fast
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -288,6 +288,21 @@ std_msgs_generate_messages_cpp/fast:
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
@@ -361,6 +376,21 @@ std_msgs_generate_messages_lisp: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_mess
 std_msgs_generate_messages_lisp/fast:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
+
+# Convenience name for target.
+speed_calc: udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
+
+.PHONY : speed_calc
+
+# fast build rule for target.
+speed_calc/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build
+.PHONY : speed_calc/fast
 
 # Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
@@ -543,6 +573,21 @@ geometry_msgs_generate_messages_eus/fast:
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule
+
+# Convenience name for target.
+RPM_pub: udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule
+
+.PHONY : RPM_pub
+
+# fast build rule for target.
+RPM_pub/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build.make udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build
+.PHONY : RPM_pub/fast
+
+# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
@@ -557,20 +602,32 @@ subscriber/fast:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/build
 .PHONY : subscriber/fast
 
-# Convenience name for target.
-udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+src/RPM_pub.o: src/RPM_pub.cpp.o
 
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : src/RPM_pub.o
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
+# target to build an object file
+src/RPM_pub.cpp.o:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build.make udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/src/RPM_pub.cpp.o
+.PHONY : src/RPM_pub.cpp.o
 
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+src/RPM_pub.i: src/RPM_pub.cpp.i
+
+.PHONY : src/RPM_pub.i
+
+# target to preprocess a source file
+src/RPM_pub.cpp.i:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build.make udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/src/RPM_pub.cpp.i
+.PHONY : src/RPM_pub.cpp.i
+
+src/RPM_pub.s: src/RPM_pub.cpp.s
+
+.PHONY : src/RPM_pub.s
+
+# target to generate assembly for a file
+src/RPM_pub.cpp.s:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build.make udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/src/RPM_pub.cpp.s
+.PHONY : src/RPM_pub.cpp.s
 
 src/publisher.o: src/publisher.cpp.o
 
@@ -598,6 +655,33 @@ src/publisher.s: src/publisher.cpp.s
 src/publisher.cpp.s:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/src/publisher.cpp.s
 .PHONY : src/publisher.cpp.s
+
+src/speed_calc.o: src/speed_calc.cpp.o
+
+.PHONY : src/speed_calc.o
+
+# target to build an object file
+src/speed_calc.cpp.o:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/src/speed_calc.cpp.o
+.PHONY : src/speed_calc.cpp.o
+
+src/speed_calc.i: src/speed_calc.cpp.i
+
+.PHONY : src/speed_calc.i
+
+# target to preprocess a source file
+src/speed_calc.cpp.i:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/src/speed_calc.cpp.i
+.PHONY : src/speed_calc.cpp.i
+
+src/speed_calc.s: src/speed_calc.cpp.s
+
+.PHONY : src/speed_calc.s
+
+# target to generate assembly for a file
+src/speed_calc.cpp.s:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/src/speed_calc.cpp.s
+.PHONY : src/speed_calc.cpp.s
 
 src/subscriber.o: src/subscriber.cpp.o
 
@@ -632,9 +716,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... edit_cache"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_cpp"
@@ -644,11 +728,14 @@ help:
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... test"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... speed_calc"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_eus"
@@ -662,13 +749,18 @@ help:
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... install/strip"
+	@echo "... RPM_pub"
 	@echo "... subscriber"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... test"
-	@echo "... edit_cache"
+	@echo "... src/RPM_pub.o"
+	@echo "... src/RPM_pub.i"
+	@echo "... src/RPM_pub.s"
 	@echo "... src/publisher.o"
 	@echo "... src/publisher.i"
 	@echo "... src/publisher.s"
+	@echo "... src/speed_calc.o"
+	@echo "... src/speed_calc.i"
+	@echo "... src/speed_calc.s"
 	@echo "... src/subscriber.o"
 	@echo "... src/subscriber.i"
 	@echo "... src/subscriber.s"

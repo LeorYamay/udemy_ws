@@ -389,6 +389,19 @@ std_msgs_generate_messages_cpp/fast:
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_nodejs
 
 # Build rule for target.
@@ -452,6 +465,19 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 std_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named speed_calc
+
+# Build rule for target.
+speed_calc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 speed_calc
+.PHONY : speed_calc
+
+# fast build rule for target.
+speed_calc/fast:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build
+.PHONY : speed_calc/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
@@ -610,6 +636,19 @@ geometry_msgs_generate_messages_eus/fast:
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named RPM_pub
+
+# Build rule for target.
+RPM_pub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RPM_pub
+.PHONY : RPM_pub
+
+# fast build rule for target.
+RPM_pub/fast:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build.make udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build
+.PHONY : RPM_pub/fast
+
+#=============================================================================
 # Target rules for targets named subscriber
 
 # Build rule for target.
@@ -621,19 +660,6 @@ subscriber: cmake_check_build_system
 subscriber/fast:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/build
 .PHONY : subscriber/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Help Target
 help:
@@ -665,11 +691,13 @@ help:
 	@echo "... publisher"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... speed_calc"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_eus"
@@ -682,8 +710,8 @@ help:
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... RPM_pub"
 	@echo "... subscriber"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
 .PHONY : help
 
 
