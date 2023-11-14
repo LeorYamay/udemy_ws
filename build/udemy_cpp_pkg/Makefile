@@ -78,6 +78,18 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -123,18 +135,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/leory/udemy_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles /home/leory/udemy_ws/build/udemy_cpp_pkg/CMakeFiles/progress.marks
@@ -166,6 +166,126 @@ preinstall/fast:
 depend:
 	cd /home/leory/udemy_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
+
+# Convenience name for target.
+speed_calc: udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
+
+.PHONY : speed_calc
+
+# fast build rule for target.
+speed_calc/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build
+.PHONY : speed_calc/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
+
+# Convenience name for target.
+subscriber: udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
+
+.PHONY : subscriber
+
+# fast build rule for target.
+subscriber/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/build
+.PHONY : subscriber/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule
+
+# Convenience name for target.
+RPM_pub: udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule
+
+.PHONY : RPM_pub
+
+# fast build rule for target.
+RPM_pub/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build.make udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build
+.PHONY : RPM_pub/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genpy.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genpy.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genpy.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_genpy: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genpy.dir/rule
+
+.PHONY : udemy_cpp_pkg_genpy
+
+# fast build rule for target.
+udemy_cpp_pkg_genpy/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genpy.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genpy.dir/build
+.PHONY : udemy_cpp_pkg_genpy/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_generate_messages_py: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/rule
+
+.PHONY : udemy_cpp_pkg_generate_messages_py
+
+# fast build rule for target.
+udemy_cpp_pkg_generate_messages_py/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/build
+.PHONY : udemy_cpp_pkg_generate_messages_py/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_generate_messages_nodejs: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/rule
+
+.PHONY : udemy_cpp_pkg_generate_messages_nodejs
+
+# fast build rule for target.
+udemy_cpp_pkg_generate_messages_nodejs/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/build
+.PHONY : udemy_cpp_pkg_generate_messages_nodejs/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_genlisp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/rule
+
+.PHONY : udemy_cpp_pkg_genlisp
+
+# fast build rule for target.
+udemy_cpp_pkg_genlisp/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/build
+.PHONY : udemy_cpp_pkg_genlisp/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_generate_messages_lisp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/rule
+
+.PHONY : udemy_cpp_pkg_generate_messages_lisp
+
+# fast build rule for target.
+udemy_cpp_pkg_generate_messages_lisp/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build
+.PHONY : udemy_cpp_pkg_generate_messages_lisp/fast
 
 # Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
@@ -241,21 +361,6 @@ rosgraph_msgs_generate_messages_lisp: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_gen
 rosgraph_msgs_generate_messages_lisp/fast:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-udemy_cpp_pkg/CMakeFiles/publisher.dir/rule:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/publisher.dir/rule
-.PHONY : udemy_cpp_pkg/CMakeFiles/publisher.dir/rule
-
-# Convenience name for target.
-publisher: udemy_cpp_pkg/CMakeFiles/publisher.dir/rule
-
-.PHONY : publisher
-
-# fast build rule for target.
-publisher/fast:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/build
-.PHONY : publisher/fast
 
 # Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
@@ -363,6 +468,21 @@ roscpp_generate_messages_py/fast:
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/rule
+
+# Convenience name for target.
+_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/rule
+
+.PHONY : _udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck
+
+# fast build rule for target.
+_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/build.make udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/build
+.PHONY : _udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck/fast
+
+# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
@@ -378,21 +498,6 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
-.PHONY : udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
-
-# Convenience name for target.
-speed_calc: udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
-
-.PHONY : speed_calc
-
-# fast build rule for target.
-speed_calc/fast:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build
-.PHONY : speed_calc/fast
-
-# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
@@ -406,6 +511,36 @@ rosgraph_msgs_generate_messages_nodejs: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_g
 rosgraph_msgs_generate_messages_nodejs/fast:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_gencpp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
+
+.PHONY : udemy_cpp_pkg_gencpp
+
+# fast build rule for target.
+udemy_cpp_pkg_gencpp/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build
+.PHONY : udemy_cpp_pkg_gencpp/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/service_server.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/service_server.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/service_server.dir/rule
+
+# Convenience name for target.
+service_server: udemy_cpp_pkg/CMakeFiles/service_server.dir/rule
+
+.PHONY : service_server
+
+# fast build rule for target.
+service_server/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_server.dir/build.make udemy_cpp_pkg/CMakeFiles/service_server.dir/build
+.PHONY : service_server/fast
 
 # Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
@@ -468,6 +603,21 @@ sensor_msgs_generate_messages_lisp/fast:
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_generate_messages_eus: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/rule
+
+.PHONY : udemy_cpp_pkg_generate_messages_eus
+
+# fast build rule for target.
+udemy_cpp_pkg_generate_messages_eus/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/build
+.PHONY : udemy_cpp_pkg_generate_messages_eus/fast
+
+# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
@@ -513,6 +663,51 @@ geometry_msgs_generate_messages_py/fast:
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/publisher.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/publisher.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/publisher.dir/rule
+
+# Convenience name for target.
+publisher: udemy_cpp_pkg/CMakeFiles/publisher.dir/rule
+
+.PHONY : publisher
+
+# fast build rule for target.
+publisher/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/build
+.PHONY : publisher/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_geneus: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/rule
+
+.PHONY : udemy_cpp_pkg_geneus
+
+# fast build rule for target.
+udemy_cpp_pkg_geneus/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/build
+.PHONY : udemy_cpp_pkg_geneus/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/rule
+
+.PHONY : udemy_cpp_pkg_generate_messages_cpp
+
+# fast build rule for target.
+udemy_cpp_pkg_generate_messages_cpp/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/build
+.PHONY : udemy_cpp_pkg_generate_messages_cpp/fast
+
+# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
@@ -541,6 +736,21 @@ sensor_msgs_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate
 sensor_msgs_generate_messages_cpp/fast:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_gennodejs: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/rule
+
+.PHONY : udemy_cpp_pkg_gennodejs
+
+# fast build rule for target.
+udemy_cpp_pkg_gennodejs/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/build
+.PHONY : udemy_cpp_pkg_gennodejs/fast
 
 # Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
@@ -573,34 +783,19 @@ geometry_msgs_generate_messages_eus/fast:
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule
-.PHONY : udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/rule
 
 # Convenience name for target.
-RPM_pub: udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/rule
+udemy_cpp_pkg_generate_messages: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/rule
 
-.PHONY : RPM_pub
+.PHONY : udemy_cpp_pkg_generate_messages
 
 # fast build rule for target.
-RPM_pub/fast:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build.make udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build
-.PHONY : RPM_pub/fast
-
-# Convenience name for target.
-udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
-.PHONY : udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
-
-# Convenience name for target.
-subscriber: udemy_cpp_pkg/CMakeFiles/subscriber.dir/rule
-
-.PHONY : subscriber
-
-# fast build rule for target.
-subscriber/fast:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/build
-.PHONY : subscriber/fast
+udemy_cpp_pkg_generate_messages/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/build
+.PHONY : udemy_cpp_pkg_generate_messages/fast
 
 src/RPM_pub.o: src/RPM_pub.cpp.o
 
@@ -655,6 +850,33 @@ src/publisher.s: src/publisher.cpp.s
 src/publisher.cpp.s:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/src/publisher.cpp.s
 .PHONY : src/publisher.cpp.s
+
+src/service_server.o: src/service_server.cpp.o
+
+.PHONY : src/service_server.o
+
+# target to build an object file
+src/service_server.cpp.o:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_server.dir/build.make udemy_cpp_pkg/CMakeFiles/service_server.dir/src/service_server.cpp.o
+.PHONY : src/service_server.cpp.o
+
+src/service_server.i: src/service_server.cpp.i
+
+.PHONY : src/service_server.i
+
+# target to preprocess a source file
+src/service_server.cpp.i:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_server.dir/build.make udemy_cpp_pkg/CMakeFiles/service_server.dir/src/service_server.cpp.i
+.PHONY : src/service_server.cpp.i
+
+src/service_server.s: src/service_server.cpp.s
+
+.PHONY : src/service_server.s
+
+# target to generate assembly for a file
+src/service_server.cpp.s:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_server.dir/build.make udemy_cpp_pkg/CMakeFiles/service_server.dir/src/service_server.cpp.s
+.PHONY : src/service_server.cpp.s
 
 src/speed_calc.o: src/speed_calc.cpp.o
 
@@ -718,13 +940,21 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... speed_calc"
+	@echo "... subscriber"
+	@echo "... install/strip"
+	@echo "... RPM_pub"
+	@echo "... udemy_cpp_pkg_genpy"
+	@echo "... udemy_cpp_pkg_generate_messages_py"
 	@echo "... edit_cache"
+	@echo "... udemy_cpp_pkg_generate_messages_nodejs"
+	@echo "... udemy_cpp_pkg_genlisp"
+	@echo "... udemy_cpp_pkg_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... publisher"
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
@@ -734,30 +964,38 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... _udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... speed_calc"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... udemy_cpp_pkg_gencpp"
 	@echo "... rebuild_cache"
+	@echo "... service_server"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... udemy_cpp_pkg_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... publisher"
+	@echo "... udemy_cpp_pkg_geneus"
+	@echo "... udemy_cpp_pkg_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... udemy_cpp_pkg_gennodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... install/strip"
-	@echo "... RPM_pub"
-	@echo "... subscriber"
+	@echo "... udemy_cpp_pkg_generate_messages"
 	@echo "... src/RPM_pub.o"
 	@echo "... src/RPM_pub.i"
 	@echo "... src/RPM_pub.s"
 	@echo "... src/publisher.o"
 	@echo "... src/publisher.i"
 	@echo "... src/publisher.s"
+	@echo "... src/service_server.o"
+	@echo "... src/service_server.i"
+	@echo "... src/service_server.s"
 	@echo "... src/speed_calc.o"
 	@echo "... src/speed_calc.i"
 	@echo "... src/speed_calc.s"

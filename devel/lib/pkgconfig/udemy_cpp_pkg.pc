@@ -3,6 +3,6 @@ prefix=/home/leory/udemy_ws/devel
 Name: udemy_cpp_pkg
 Description: Description of udemy_cpp_pkg
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/leory/udemy_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: 
