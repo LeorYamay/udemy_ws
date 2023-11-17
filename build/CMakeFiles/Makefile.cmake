@@ -231,6 +231,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "udemy_cpp_pkg/CMakeFiles/service_client.dir/DependInfo.cmake"
   "udemy_cpp_pkg/CMakeFiles/speed_calc.dir/DependInfo.cmake"
   "udemy_cpp_pkg/CMakeFiles/subscriber.dir/DependInfo.cmake"
   "udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/DependInfo.cmake"

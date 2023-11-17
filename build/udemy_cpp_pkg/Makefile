@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/service_client.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/service_client.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/service_client.dir/rule
+
+# Convenience name for target.
+service_client: udemy_cpp_pkg/CMakeFiles/service_client.dir/rule
+
+.PHONY : service_client
+
+# fast build rule for target.
+service_client/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_client.dir/build.make udemy_cpp_pkg/CMakeFiles/service_client.dir/build
+.PHONY : service_client/fast
+
+# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/speed_calc.dir/rule
@@ -851,6 +866,33 @@ src/publisher.cpp.s:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/src/publisher.cpp.s
 .PHONY : src/publisher.cpp.s
 
+src/service_client.o: src/service_client.cpp.o
+
+.PHONY : src/service_client.o
+
+# target to build an object file
+src/service_client.cpp.o:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_client.dir/build.make udemy_cpp_pkg/CMakeFiles/service_client.dir/src/service_client.cpp.o
+.PHONY : src/service_client.cpp.o
+
+src/service_client.i: src/service_client.cpp.i
+
+.PHONY : src/service_client.i
+
+# target to preprocess a source file
+src/service_client.cpp.i:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_client.dir/build.make udemy_cpp_pkg/CMakeFiles/service_client.dir/src/service_client.cpp.i
+.PHONY : src/service_client.cpp.i
+
+src/service_client.s: src/service_client.cpp.s
+
+.PHONY : src/service_client.s
+
+# target to generate assembly for a file
+src/service_client.cpp.s:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_client.dir/build.make udemy_cpp_pkg/CMakeFiles/service_client.dir/src/service_client.cpp.s
+.PHONY : src/service_client.cpp.s
+
 src/service_server.o: src/service_server.cpp.o
 
 .PHONY : src/service_server.o
@@ -940,6 +982,7 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... service_client"
 	@echo "... speed_calc"
 	@echo "... subscriber"
 	@echo "... install/strip"
@@ -993,6 +1036,9 @@ help:
 	@echo "... src/publisher.o"
 	@echo "... src/publisher.i"
 	@echo "... src/publisher.s"
+	@echo "... src/service_client.o"
+	@echo "... src/service_client.i"
+	@echo "... src/service_client.s"
 	@echo "... src/service_server.o"
 	@echo "... src/service_server.i"
 	@echo "... src/service_server.s"

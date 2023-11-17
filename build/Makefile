@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named service_client
+
+# Build rule for target.
+service_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 service_client
+.PHONY : service_client
+
+# fast build rule for target.
+service_client/fast:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_client.dir/build.make udemy_cpp_pkg/CMakeFiles/service_client.dir/build
+.PHONY : service_client/fast
+
+#=============================================================================
 # Target rules for targets named speed_calc
 
 # Build rule for target.
@@ -852,6 +865,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... service_client"
 	@echo "... speed_calc"
 	@echo "... subscriber"
 	@echo "... RPM_pub"

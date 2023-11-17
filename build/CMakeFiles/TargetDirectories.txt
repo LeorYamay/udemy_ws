@@ -37,6 +37,7 @@
 /home/leory/udemy_ws/build/gtest/googletest/CMakeFiles/gtest.dir
 /home/leory/udemy_ws/build/udemy_cpp_pkg/CMakeFiles/install.dir
 /home/leory/udemy_ws/build/udemy_cpp_pkg/CMakeFiles/list_install_components.dir
+/home/leory/udemy_ws/build/udemy_cpp_pkg/CMakeFiles/service_client.dir
 /home/leory/udemy_ws/build/udemy_cpp_pkg/CMakeFiles/speed_calc.dir
 /home/leory/udemy_ws/build/udemy_cpp_pkg/CMakeFiles/subscriber.dir
 /home/leory/udemy_ws/build/udemy_cpp_pkg/CMakeFiles/install/strip.dir

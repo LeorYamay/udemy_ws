@@ -136,6 +136,7 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 # Directory level rules for directory udemy_cpp_pkg
 
 # Recursive "all" directory target.
+udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/service_client.dir/all
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/speed_calc.dir/all
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/subscriber.dir/all
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/all
@@ -151,6 +152,7 @@ udemy_cpp_pkg/preinstall:
 .PHONY : udemy_cpp_pkg/preinstall
 
 # Recursive "clean" directory target.
+udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/service_client.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/speed_calc.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/subscriber.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/clean
@@ -441,13 +443,40 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
+# Target rules for target udemy_cpp_pkg/CMakeFiles/service_client.dir
+
+# All Build rule for target.
+udemy_cpp_pkg/CMakeFiles/service_client.dir/all: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_client.dir/build.make udemy_cpp_pkg/CMakeFiles/service_client.dir/depend
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_client.dir/build.make udemy_cpp_pkg/CMakeFiles/service_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=13,14 "Built target service_client"
+.PHONY : udemy_cpp_pkg/CMakeFiles/service_client.dir/all
+
+# Build rule for subdir invocation for target.
+udemy_cpp_pkg/CMakeFiles/service_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/service_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+.PHONY : udemy_cpp_pkg/CMakeFiles/service_client.dir/rule
+
+# Convenience name for target.
+service_client: udemy_cpp_pkg/CMakeFiles/service_client.dir/rule
+
+.PHONY : service_client
+
+# clean rule for target.
+udemy_cpp_pkg/CMakeFiles/service_client.dir/clean:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_client.dir/build.make udemy_cpp_pkg/CMakeFiles/service_client.dir/clean
+.PHONY : udemy_cpp_pkg/CMakeFiles/service_client.dir/clean
+
+#=============================================================================
 # Target rules for target udemy_cpp_pkg/CMakeFiles/speed_calc.dir
 
 # All Build rule for target.
 udemy_cpp_pkg/CMakeFiles/speed_calc.dir/all:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=15,16 "Built target speed_calc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=17,18 "Built target speed_calc"
 .PHONY : udemy_cpp_pkg/CMakeFiles/speed_calc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -474,7 +503,7 @@ udemy_cpp_pkg/CMakeFiles/speed_calc.dir/clean:
 udemy_cpp_pkg/CMakeFiles/subscriber.dir/all:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=17,18 "Built target subscriber"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=19,20 "Built target subscriber"
 .PHONY : udemy_cpp_pkg/CMakeFiles/subscriber.dir/all
 
 # Build rule for subdir invocation for target.
@@ -557,7 +586,7 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/all: udemy_cpp_p
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/all: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=24,25 "Built target udemy_cpp_pkg_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=26,27 "Built target udemy_cpp_pkg_generate_messages_py"
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -586,7 +615,7 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/all: udemy_c
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/all: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=23 "Built target udemy_cpp_pkg_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=25 "Built target udemy_cpp_pkg_generate_messages_nodejs"
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -642,7 +671,7 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/all: udemy_cpp
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/all: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=22 "Built target udemy_cpp_pkg_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=24 "Built target udemy_cpp_pkg_generate_messages_lisp"
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1101,7 +1130,7 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/clean:
 udemy_cpp_pkg/CMakeFiles/service_server.dir/all: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_server.dir/build.make udemy_cpp_pkg/CMakeFiles/service_server.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_server.dir/build.make udemy_cpp_pkg/CMakeFiles/service_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=13,14 "Built target service_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=15,16 "Built target service_server"
 .PHONY : udemy_cpp_pkg/CMakeFiles/service_server.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1238,7 +1267,7 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/all: udemy_cpp_
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/all: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=20,21 "Built target udemy_cpp_pkg_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=22,23 "Built target udemy_cpp_pkg_generate_messages_eus"
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1402,7 +1431,7 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all: udemy_cpp_
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=19 "Built target udemy_cpp_pkg_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=21 "Built target udemy_cpp_pkg_generate_messages_cpp"
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
