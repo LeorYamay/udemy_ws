@@ -1,6 +1,6 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
-#include <string.h>;
+#include <string.h>
 
 int main(int argc, char ** argv)
 {

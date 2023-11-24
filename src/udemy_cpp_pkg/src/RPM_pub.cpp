@@ -2,8 +2,8 @@
 // #include "std_msgs/String.h"
 #include "std_msgs/Float32.h"
 
-#include <string.h>;
-#include <float.h>;
+#include <string.h>
+#include <float.h>
 
 const float RPM =60;
 int main(int argc, char ** argv)

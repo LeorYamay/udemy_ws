@@ -13,6 +13,8 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   std_msgs
   message_generation
+  cv_bridge
+  image_transport
 )
 
 ## System dependencies are found with CMake's conventions
@@ -120,6 +122,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -224,6 +227,9 @@ add_dependencies(service_client udemy_cpp_pkg_generate_messages_cpp )
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
+
+  target_link_libraries(${catkin_LIBRARIES}-test ${OpenCV_INCLUDE_DIRS})
+
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
