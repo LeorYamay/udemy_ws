@@ -74,6 +74,8 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "bit": "cpp",
-        "camera_client": "cpp"
+        "camera_client": "cpp",
+        "codecvt": "cpp",
+        "filesystem": "cpp"
     }
 }

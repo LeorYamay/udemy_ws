@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/leory/udemy_ws/devel/include/udemy_cpp_pkg/Camera.h"
   "/home/leory/udemy_ws/devel/include/udemy_cpp_pkg/OddEvenCheck.h"
   "CMakeFiles/udemy_cpp_pkg_generate_messages_cpp"
 )

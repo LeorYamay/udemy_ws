@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv"
+services_str = "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv;/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv"
 pkg_name = "udemy_cpp_pkg"
 dependencies_str = "sensor_msgs;std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

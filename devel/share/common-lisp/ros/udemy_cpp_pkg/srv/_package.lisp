@@ -1,6 +1,11 @@
 (cl:defpackage udemy_cpp_pkg-srv
   (:use )
   (:export
+   "CAMERA"
+   "<CAMERA-REQUEST>"
+   "CAMERA-REQUEST"
+   "<CAMERA-RESPONSE>"
+   "CAMERA-RESPONSE"
    "ODDEVENCHECK"
    "<ODDEVENCHECK-REQUEST>"
    "ODDEVENCHECK-REQUEST"

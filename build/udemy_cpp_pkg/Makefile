@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/camera_client.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/camera_client.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/camera_client.dir/rule
+
+# Convenience name for target.
+camera_client: udemy_cpp_pkg/CMakeFiles/camera_client.dir/rule
+
+.PHONY : camera_client
+
+# fast build rule for target.
+camera_client/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_client.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_client.dir/build
+.PHONY : camera_client/fast
+
+# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/service_client.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/service_client.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/service_client.dir/rule
@@ -301,6 +316,21 @@ udemy_cpp_pkg_generate_messages_lisp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gen
 udemy_cpp_pkg_generate_messages_lisp/fast:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build
 .PHONY : udemy_cpp_pkg_generate_messages_lisp/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_gencpp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
+
+.PHONY : udemy_cpp_pkg_gencpp
+
+# fast build rule for target.
+udemy_cpp_pkg_gencpp/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build
+.PHONY : udemy_cpp_pkg_gencpp/fast
 
 # Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
@@ -483,6 +513,21 @@ roscpp_generate_messages_py/fast:
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/camera_server.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/camera_server.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/camera_server.dir/rule
+
+# Convenience name for target.
+camera_server: udemy_cpp_pkg/CMakeFiles/camera_server.dir/rule
+
+.PHONY : camera_server
+
+# fast build rule for target.
+camera_server/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_server.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_server.dir/build
+.PHONY : camera_server/fast
+
+# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/rule
@@ -526,21 +571,6 @@ rosgraph_msgs_generate_messages_nodejs: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_g
 rosgraph_msgs_generate_messages_nodejs/fast:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
-.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
-
-# Convenience name for target.
-udemy_cpp_pkg_gencpp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
-
-.PHONY : udemy_cpp_pkg_gencpp
-
-# fast build rule for target.
-udemy_cpp_pkg_gencpp/fast:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build
-.PHONY : udemy_cpp_pkg_gencpp/fast
 
 # Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/service_server.dir/rule:
@@ -738,21 +768,6 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/rule:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/rule
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/rule
@@ -812,6 +827,36 @@ udemy_cpp_pkg_generate_messages/fast:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/build
 .PHONY : udemy_cpp_pkg_generate_messages/fast
 
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/rule:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/rule
+.PHONY : udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/rule
+
+# Convenience name for target.
+_udemy_cpp_pkg_generate_messages_check_deps_Camera: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/rule
+
+.PHONY : _udemy_cpp_pkg_generate_messages_check_deps_Camera
+
+# fast build rule for target.
+_udemy_cpp_pkg_generate_messages_check_deps_Camera/fast:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/build.make udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/build
+.PHONY : _udemy_cpp_pkg_generate_messages_check_deps_Camera/fast
+
 src/RPM_pub.o: src/RPM_pub.cpp.o
 
 .PHONY : src/RPM_pub.o
@@ -838,6 +883,60 @@ src/RPM_pub.s: src/RPM_pub.cpp.s
 src/RPM_pub.cpp.s:
 	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/build.make udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/src/RPM_pub.cpp.s
 .PHONY : src/RPM_pub.cpp.s
+
+src/camera_client.o: src/camera_client.cpp.o
+
+.PHONY : src/camera_client.o
+
+# target to build an object file
+src/camera_client.cpp.o:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_client.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_client.dir/src/camera_client.cpp.o
+.PHONY : src/camera_client.cpp.o
+
+src/camera_client.i: src/camera_client.cpp.i
+
+.PHONY : src/camera_client.i
+
+# target to preprocess a source file
+src/camera_client.cpp.i:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_client.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_client.dir/src/camera_client.cpp.i
+.PHONY : src/camera_client.cpp.i
+
+src/camera_client.s: src/camera_client.cpp.s
+
+.PHONY : src/camera_client.s
+
+# target to generate assembly for a file
+src/camera_client.cpp.s:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_client.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_client.dir/src/camera_client.cpp.s
+.PHONY : src/camera_client.cpp.s
+
+src/camera_server.o: src/camera_server.cpp.o
+
+.PHONY : src/camera_server.o
+
+# target to build an object file
+src/camera_server.cpp.o:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_server.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_server.dir/src/camera_server.cpp.o
+.PHONY : src/camera_server.cpp.o
+
+src/camera_server.i: src/camera_server.cpp.i
+
+.PHONY : src/camera_server.i
+
+# target to preprocess a source file
+src/camera_server.cpp.i:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_server.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_server.dir/src/camera_server.cpp.i
+.PHONY : src/camera_server.cpp.i
+
+src/camera_server.s: src/camera_server.cpp.s
+
+.PHONY : src/camera_server.s
+
+# target to generate assembly for a file
+src/camera_server.cpp.s:
+	cd /home/leory/udemy_ws/build && $(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_server.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_server.dir/src/camera_server.cpp.s
+.PHONY : src/camera_server.cpp.s
 
 src/publisher.o: src/publisher.cpp.o
 
@@ -982,6 +1081,7 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... camera_client"
 	@echo "... service_client"
 	@echo "... speed_calc"
 	@echo "... subscriber"
@@ -993,6 +1093,7 @@ help:
 	@echo "... udemy_cpp_pkg_generate_messages_nodejs"
 	@echo "... udemy_cpp_pkg_genlisp"
 	@echo "... udemy_cpp_pkg_generate_messages_lisp"
+	@echo "... udemy_cpp_pkg_gencpp"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_cpp"
@@ -1007,10 +1108,10 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... camera_server"
 	@echo "... _udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... udemy_cpp_pkg_gencpp"
 	@echo "... rebuild_cache"
 	@echo "... service_server"
 	@echo "... roscpp_generate_messages_eus"
@@ -1025,14 +1126,21 @@ help:
 	@echo "... udemy_cpp_pkg_geneus"
 	@echo "... udemy_cpp_pkg_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... udemy_cpp_pkg_gennodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... udemy_cpp_pkg_generate_messages"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... _udemy_cpp_pkg_generate_messages_check_deps_Camera"
 	@echo "... src/RPM_pub.o"
 	@echo "... src/RPM_pub.i"
 	@echo "... src/RPM_pub.s"
+	@echo "... src/camera_client.o"
+	@echo "... src/camera_client.i"
+	@echo "... src/camera_client.s"
+	@echo "... src/camera_server.o"
+	@echo "... src/camera_server.i"
+	@echo "... src/camera_server.s"
 	@echo "... src/publisher.o"
 	@echo "... src/publisher.i"
 	@echo "... src/publisher.s"

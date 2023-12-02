@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/leory/udemy_ws/build
 include udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/progress.make
 
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp: /home/leory/udemy_ws/devel/include/udemy_cpp_pkg/OddEvenCheck.h
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp: /home/leory/udemy_ws/devel/include/udemy_cpp_pkg/Camera.h
 
 
 /home/leory/udemy_ws/devel/include/udemy_cpp_pkg/OddEvenCheck.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -63,8 +64,18 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp: /home/leory/udemy_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from udemy_cpp_pkg/OddEvenCheck.srv"
 	cd /home/leory/udemy_ws/src/udemy_cpp_pkg && /home/leory/udemy_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p udemy_cpp_pkg -o /home/leory/udemy_ws/devel/include/udemy_cpp_pkg -e /opt/ros/noetic/share/gencpp/cmake/..
 
+/home/leory/udemy_ws/devel/include/udemy_cpp_pkg/Camera.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/leory/udemy_ws/devel/include/udemy_cpp_pkg/Camera.h: /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv
+/home/leory/udemy_ws/devel/include/udemy_cpp_pkg/Camera.h: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
+/home/leory/udemy_ws/devel/include/udemy_cpp_pkg/Camera.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/leory/udemy_ws/devel/include/udemy_cpp_pkg/Camera.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/leory/udemy_ws/devel/include/udemy_cpp_pkg/Camera.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from udemy_cpp_pkg/Camera.srv"
+	cd /home/leory/udemy_ws/src/udemy_cpp_pkg && /home/leory/udemy_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p udemy_cpp_pkg -o /home/leory/udemy_ws/devel/include/udemy_cpp_pkg -e /opt/ros/noetic/share/gencpp/cmake/..
+
 udemy_cpp_pkg_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp
 udemy_cpp_pkg_generate_messages_cpp: /home/leory/udemy_ws/devel/include/udemy_cpp_pkg/OddEvenCheck.h
+udemy_cpp_pkg_generate_messages_cpp: /home/leory/udemy_ws/devel/include/udemy_cpp_pkg/Camera.h
 udemy_cpp_pkg_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/build.make
 
 .PHONY : udemy_cpp_pkg_generate_messages_cpp

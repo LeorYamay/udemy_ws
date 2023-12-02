@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "udemy_cpp_pkg: 0 messages, 1 services")
+message(STATUS "udemy_cpp_pkg: 0 messages, 2 services")
 
 set(MSG_I_FLAGS "-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg")
 
@@ -22,6 +22,11 @@ add_custom_target(_udemy_cpp_pkg_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "udemy_cpp_pkg" "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv" ""
 )
 
+get_filename_component(_filename "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv" NAME_WE)
+add_custom_target(_udemy_cpp_pkg_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "udemy_cpp_pkg" "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv" "sensor_msgs/Image:std_msgs/Header"
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -34,6 +39,12 @@ _generate_srv_cpp(udemy_cpp_pkg
   "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv"
   "${MSG_I_FLAGS}"
   ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/udemy_cpp_pkg
+)
+_generate_srv_cpp(udemy_cpp_pkg
+  "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/udemy_cpp_pkg
 )
 
@@ -50,6 +61,8 @@ add_dependencies(udemy_cpp_pkg_generate_messages udemy_cpp_pkg_generate_messages
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv" NAME_WE)
+add_dependencies(udemy_cpp_pkg_generate_messages_cpp _udemy_cpp_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv" NAME_WE)
 add_dependencies(udemy_cpp_pkg_generate_messages_cpp _udemy_cpp_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -69,6 +82,12 @@ _generate_srv_eus(udemy_cpp_pkg
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/udemy_cpp_pkg
 )
+_generate_srv_eus(udemy_cpp_pkg
+  "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/udemy_cpp_pkg
+)
 
 ### Generating Module File
 _generate_module_eus(udemy_cpp_pkg
@@ -83,6 +102,8 @@ add_dependencies(udemy_cpp_pkg_generate_messages udemy_cpp_pkg_generate_messages
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv" NAME_WE)
+add_dependencies(udemy_cpp_pkg_generate_messages_eus _udemy_cpp_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv" NAME_WE)
 add_dependencies(udemy_cpp_pkg_generate_messages_eus _udemy_cpp_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -102,6 +123,12 @@ _generate_srv_lisp(udemy_cpp_pkg
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/udemy_cpp_pkg
 )
+_generate_srv_lisp(udemy_cpp_pkg
+  "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/udemy_cpp_pkg
+)
 
 ### Generating Module File
 _generate_module_lisp(udemy_cpp_pkg
@@ -116,6 +143,8 @@ add_dependencies(udemy_cpp_pkg_generate_messages udemy_cpp_pkg_generate_messages
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv" NAME_WE)
+add_dependencies(udemy_cpp_pkg_generate_messages_lisp _udemy_cpp_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv" NAME_WE)
 add_dependencies(udemy_cpp_pkg_generate_messages_lisp _udemy_cpp_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -135,6 +164,12 @@ _generate_srv_nodejs(udemy_cpp_pkg
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/udemy_cpp_pkg
 )
+_generate_srv_nodejs(udemy_cpp_pkg
+  "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/udemy_cpp_pkg
+)
 
 ### Generating Module File
 _generate_module_nodejs(udemy_cpp_pkg
@@ -149,6 +184,8 @@ add_dependencies(udemy_cpp_pkg_generate_messages udemy_cpp_pkg_generate_messages
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv" NAME_WE)
+add_dependencies(udemy_cpp_pkg_generate_messages_nodejs _udemy_cpp_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv" NAME_WE)
 add_dependencies(udemy_cpp_pkg_generate_messages_nodejs _udemy_cpp_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -168,6 +205,12 @@ _generate_srv_py(udemy_cpp_pkg
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/udemy_cpp_pkg
 )
+_generate_srv_py(udemy_cpp_pkg
+  "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/udemy_cpp_pkg
+)
 
 ### Generating Module File
 _generate_module_py(udemy_cpp_pkg
@@ -182,6 +225,8 @@ add_dependencies(udemy_cpp_pkg_generate_messages udemy_cpp_pkg_generate_messages
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv" NAME_WE)
+add_dependencies(udemy_cpp_pkg_generate_messages_py _udemy_cpp_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv" NAME_WE)
 add_dependencies(udemy_cpp_pkg_generate_messages_py _udemy_cpp_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

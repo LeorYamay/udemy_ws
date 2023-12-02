@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/leory/udemy_ws/build
 include udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/progress.make
 
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus: /home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv/OddEvenCheck.l
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus: /home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv/Camera.l
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus: /home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/manifest.l
 
 
@@ -62,12 +63,20 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus: /home/leory/udemy_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from udemy_cpp_pkg/OddEvenCheck.srv"
 	cd /home/leory/udemy_ws/build/udemy_cpp_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p udemy_cpp_pkg -o /home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv
 
+/home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv/Camera.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv/Camera.l: /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv
+/home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv/Camera.l: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
+/home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv/Camera.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from udemy_cpp_pkg/Camera.srv"
+	cd /home/leory/udemy_ws/build/udemy_cpp_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p udemy_cpp_pkg -o /home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv
+
 /home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for udemy_cpp_pkg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for udemy_cpp_pkg"
 	cd /home/leory/udemy_ws/build/udemy_cpp_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg udemy_cpp_pkg sensor_msgs std_msgs
 
 udemy_cpp_pkg_generate_messages_eus: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus
 udemy_cpp_pkg_generate_messages_eus: /home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv/OddEvenCheck.l
+udemy_cpp_pkg_generate_messages_eus: /home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv/Camera.l
 udemy_cpp_pkg_generate_messages_eus: /home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/manifest.l
 udemy_cpp_pkg_generate_messages_eus: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/build.make
 

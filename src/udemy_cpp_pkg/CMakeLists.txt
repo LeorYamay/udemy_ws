@@ -3,6 +3,10 @@ project(udemy_cpp_pkg)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_compile_options(-std=c++17)
+
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -61,6 +65,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_service_files(
   FILES
   OddEvenCheck.srv
+  Camera.srv
 )
 
 ## Generate actions in the 'action' folder
@@ -176,6 +181,14 @@ add_executable(service_client src/service_client.cpp)
 target_link_libraries(service_client ${catkin_LIBRARIES})
 add_dependencies(service_client udemy_cpp_pkg_generate_messages_cpp )
 
+add_executable(camera_server src/camera_server.cpp)
+target_link_libraries(camera_server ${catkin_LIBRARIES} ${OpenCV_INCLUDE_DIRS})
+add_dependencies(camera_server udemy_cpp_pkg_generate_messages_cpp )
+
+add_executable(camera_client src/camera_client.cpp)
+target_link_libraries(camera_client ${catkin_LIBRARIES}${OpenCV_INCLUDE_DIRS}) 
+add_dependencies(camera_client udemy_cpp_pkg_generate_messages_cpp )
+
 #############
 ## Install ##
 #############
@@ -228,7 +241,7 @@ add_dependencies(service_client udemy_cpp_pkg_generate_messages_cpp )
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
-  target_link_libraries(${catkin_LIBRARIES}-test ${OpenCV_INCLUDE_DIRS})
+  # target_link_libraries(${catkin_LIBRARIES}-test ${OpenCV_INCLUDE_DIRS})
 
 
 ## Add folders to be run by python nosetests

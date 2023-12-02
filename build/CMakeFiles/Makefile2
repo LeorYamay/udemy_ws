@@ -136,10 +136,12 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 # Directory level rules for directory udemy_cpp_pkg
 
 # Recursive "all" directory target.
+udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/camera_client.dir/all
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/service_client.dir/all
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/speed_calc.dir/all
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/subscriber.dir/all
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/RPM_pub.dir/all
+udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/camera_server.dir/all
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/service_server.dir/all
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/publisher.dir/all
 udemy_cpp_pkg/all: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/all
@@ -152,6 +154,7 @@ udemy_cpp_pkg/preinstall:
 .PHONY : udemy_cpp_pkg/preinstall
 
 # Recursive "clean" directory target.
+udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/camera_client.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/service_client.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/speed_calc.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/subscriber.dir/clean
@@ -161,6 +164,7 @@ udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/clean
+udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
@@ -173,10 +177,10 @@ udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_nodejs.di
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_py.dir/clean
+udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/camera_server.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/service_server.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
@@ -190,11 +194,12 @@ udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/publisher.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/clean
+udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+udemy_cpp_pkg/clean: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/clean
 
 .PHONY : udemy_cpp_pkg/clean
 
@@ -341,7 +346,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=9,10 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -368,7 +373,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=3,4 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=7,8 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -395,7 +400,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=13,14 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -422,7 +427,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=7,8 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=11,12 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -443,18 +448,45 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
+# Target rules for target udemy_cpp_pkg/CMakeFiles/camera_client.dir
+
+# All Build rule for target.
+udemy_cpp_pkg/CMakeFiles/camera_client.dir/all: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_client.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_client.dir/depend
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_client.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=3,4 "Built target camera_client"
+.PHONY : udemy_cpp_pkg/CMakeFiles/camera_client.dir/all
+
+# Build rule for subdir invocation for target.
+udemy_cpp_pkg/CMakeFiles/camera_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/camera_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+.PHONY : udemy_cpp_pkg/CMakeFiles/camera_client.dir/rule
+
+# Convenience name for target.
+camera_client: udemy_cpp_pkg/CMakeFiles/camera_client.dir/rule
+
+.PHONY : camera_client
+
+# clean rule for target.
+udemy_cpp_pkg/CMakeFiles/camera_client.dir/clean:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_client.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_client.dir/clean
+.PHONY : udemy_cpp_pkg/CMakeFiles/camera_client.dir/clean
+
+#=============================================================================
 # Target rules for target udemy_cpp_pkg/CMakeFiles/service_client.dir
 
 # All Build rule for target.
 udemy_cpp_pkg/CMakeFiles/service_client.dir/all: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_client.dir/build.make udemy_cpp_pkg/CMakeFiles/service_client.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_client.dir/build.make udemy_cpp_pkg/CMakeFiles/service_client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=13,14 "Built target service_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=17,18 "Built target service_client"
 .PHONY : udemy_cpp_pkg/CMakeFiles/service_client.dir/all
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/service_client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/service_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/service_client.dir/rule
@@ -476,7 +508,7 @@ udemy_cpp_pkg/CMakeFiles/service_client.dir/clean:
 udemy_cpp_pkg/CMakeFiles/speed_calc.dir/all:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build.make udemy_cpp_pkg/CMakeFiles/speed_calc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=17,18 "Built target speed_calc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=21,22 "Built target speed_calc"
 .PHONY : udemy_cpp_pkg/CMakeFiles/speed_calc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -503,7 +535,7 @@ udemy_cpp_pkg/CMakeFiles/speed_calc.dir/clean:
 udemy_cpp_pkg/CMakeFiles/subscriber.dir/all:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/subscriber.dir/build.make udemy_cpp_pkg/CMakeFiles/subscriber.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=19,20 "Built target subscriber"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=23,24 "Built target subscriber"
 .PHONY : udemy_cpp_pkg/CMakeFiles/subscriber.dir/all
 
 # Build rule for subdir invocation for target.
@@ -562,7 +594,7 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genpy.dir/all: udemy_cpp_pkg/CMakeFiles/u
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genpy.dir/rule
@@ -584,14 +616,15 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genpy.dir/clean:
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/all: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/all
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/all: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/all: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/all
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/all: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=26,27 "Built target udemy_cpp_pkg_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=34,35,36 "Built target udemy_cpp_pkg_generate_messages_py"
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/rule
@@ -613,14 +646,15 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/clean:
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/all: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/all
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/all: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/all: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/all: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=25 "Built target udemy_cpp_pkg_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=32,33 "Built target udemy_cpp_pkg_generate_messages_nodejs"
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs.dir/rule
@@ -647,7 +681,7 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/all: udemy_cpp_pkg/CMakeFiles
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/rule
@@ -669,14 +703,15 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_genlisp.dir/clean:
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/all: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/all
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/all: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/all: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/all: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=24 "Built target udemy_cpp_pkg_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=30,31 "Built target udemy_cpp_pkg_generate_messages_lisp"
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/rule
@@ -690,6 +725,33 @@ udemy_cpp_pkg_generate_messages_lisp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gen
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/clean:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/clean
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir
+
+# All Build rule for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/all: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/depend
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num= "Built target udemy_cpp_pkg_gencpp"
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/all
+
+# Build rule for subdir invocation for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
+
+# Convenience name for target.
+udemy_cpp_pkg_gencpp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
+
+.PHONY : udemy_cpp_pkg_gencpp
+
+# clean rule for target.
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/clean:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/clean
+.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/clean
 
 #=============================================================================
 # Target rules for target udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
@@ -1016,6 +1078,33 @@ udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_py.dir/clean:
 .PHONY : udemy_cpp_pkg/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 #=============================================================================
+# Target rules for target udemy_cpp_pkg/CMakeFiles/camera_server.dir
+
+# All Build rule for target.
+udemy_cpp_pkg/CMakeFiles/camera_server.dir/all: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_server.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_server.dir/depend
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_server.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=5,6 "Built target camera_server"
+.PHONY : udemy_cpp_pkg/CMakeFiles/camera_server.dir/all
+
+# Build rule for subdir invocation for target.
+udemy_cpp_pkg/CMakeFiles/camera_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/camera_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+.PHONY : udemy_cpp_pkg/CMakeFiles/camera_server.dir/rule
+
+# Convenience name for target.
+camera_server: udemy_cpp_pkg/CMakeFiles/camera_server.dir/rule
+
+.PHONY : camera_server
+
+# clean rule for target.
+udemy_cpp_pkg/CMakeFiles/camera_server.dir/clean:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_server.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_server.dir/clean
+.PHONY : udemy_cpp_pkg/CMakeFiles/camera_server.dir/clean
+
+#=============================================================================
 # Target rules for target udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir
 
 # All Build rule for target.
@@ -1097,45 +1186,18 @@ udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
 .PHONY : udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir
-
-# All Build rule for target.
-udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/all: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/depend
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num= "Built target udemy_cpp_pkg_gencpp"
-.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/all
-
-# Build rule for subdir invocation for target.
-udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
-.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
-
-# Convenience name for target.
-udemy_cpp_pkg_gencpp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/rule
-
-.PHONY : udemy_cpp_pkg_gencpp
-
-# clean rule for target.
-udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/clean:
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/clean
-.PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/clean
-
-#=============================================================================
 # Target rules for target udemy_cpp_pkg/CMakeFiles/service_server.dir
 
 # All Build rule for target.
 udemy_cpp_pkg/CMakeFiles/service_server.dir/all: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_server.dir/build.make udemy_cpp_pkg/CMakeFiles/service_server.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/service_server.dir/build.make udemy_cpp_pkg/CMakeFiles/service_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=15,16 "Built target service_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=19,20 "Built target service_server"
 .PHONY : udemy_cpp_pkg/CMakeFiles/service_server.dir/all
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/service_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/service_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/service_server.dir/rule
@@ -1265,14 +1327,15 @@ udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/all: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/all: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/all
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/all: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/all: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=22,23 "Built target udemy_cpp_pkg_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=27,28,29 "Built target udemy_cpp_pkg_generate_messages_eus"
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_eus.dir/rule
@@ -1375,7 +1438,7 @@ udemy_cpp_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
 udemy_cpp_pkg/CMakeFiles/publisher.dir/all:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/publisher.dir/build.make udemy_cpp_pkg/CMakeFiles/publisher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=11,12 "Built target publisher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=15,16 "Built target publisher"
 .PHONY : udemy_cpp_pkg/CMakeFiles/publisher.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1407,7 +1470,7 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/all: udemy_cpp_pkg/CMakeFiles/
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/rule
@@ -1429,14 +1492,15 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_geneus.dir/clean:
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all: udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck.dir/all
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/all
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/depend
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=21 "Built target udemy_cpp_pkg_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=25,26 "Built target udemy_cpp_pkg_generate_messages_cpp"
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_cpp.dir/rule
@@ -1479,33 +1543,6 @@ udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
 .PHONY : udemy_cpp_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
-.PHONY : udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
-.PHONY : udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# clean rule for target.
-udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
-.PHONY : udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
 # Target rules for target udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir
 
 # All Build rule for target.
@@ -1517,7 +1554,7 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/all: udemy_cpp_pkg/CMakeFil
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gennodejs.dir/rule
@@ -1602,7 +1639,7 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/all: udemy_cpp_pkg/
 
 # Build rule for subdir invocation for target.
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/rule
@@ -1616,6 +1653,60 @@ udemy_cpp_pkg_generate_messages: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/clean:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/clean
 .PHONY : udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/clean
+
+#=============================================================================
+# Target rules for target udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
+.PHONY : udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+.PHONY : udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# clean rule for target.
+udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+.PHONY : udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir
+
+# All Build rule for target.
+udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/all:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/build.make udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/depend
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/build.make udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num= "Built target _udemy_cpp_pkg_generate_messages_check_deps_Camera"
+.PHONY : udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/all
+
+# Build rule for subdir invocation for target.
+udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leory/udemy_ws/build/CMakeFiles 0
+.PHONY : udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/rule
+
+# Convenience name for target.
+_udemy_cpp_pkg_generate_messages_check_deps_Camera: udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/rule
+
+.PHONY : _udemy_cpp_pkg_generate_messages_check_deps_Camera
+
+# clean rule for target.
+udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/clean:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/build.make udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/clean
+.PHONY : udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

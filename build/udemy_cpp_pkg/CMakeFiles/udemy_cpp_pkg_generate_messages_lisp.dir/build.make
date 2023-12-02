@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/leory/udemy_ws/build
 include udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/progress.make
 
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp: /home/leory/udemy_ws/devel/share/common-lisp/ros/udemy_cpp_pkg/srv/OddEvenCheck.lisp
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp: /home/leory/udemy_ws/devel/share/common-lisp/ros/udemy_cpp_pkg/srv/Camera.lisp
 
 
 /home/leory/udemy_ws/devel/share/common-lisp/ros/udemy_cpp_pkg/srv/OddEvenCheck.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -61,8 +62,16 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp: /home/leory/udemy
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from udemy_cpp_pkg/OddEvenCheck.srv"
 	cd /home/leory/udemy_ws/build/udemy_cpp_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p udemy_cpp_pkg -o /home/leory/udemy_ws/devel/share/common-lisp/ros/udemy_cpp_pkg/srv
 
+/home/leory/udemy_ws/devel/share/common-lisp/ros/udemy_cpp_pkg/srv/Camera.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/leory/udemy_ws/devel/share/common-lisp/ros/udemy_cpp_pkg/srv/Camera.lisp: /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv
+/home/leory/udemy_ws/devel/share/common-lisp/ros/udemy_cpp_pkg/srv/Camera.lisp: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
+/home/leory/udemy_ws/devel/share/common-lisp/ros/udemy_cpp_pkg/srv/Camera.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from udemy_cpp_pkg/Camera.srv"
+	cd /home/leory/udemy_ws/build/udemy_cpp_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p udemy_cpp_pkg -o /home/leory/udemy_ws/devel/share/common-lisp/ros/udemy_cpp_pkg/srv
+
 udemy_cpp_pkg_generate_messages_lisp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp
 udemy_cpp_pkg_generate_messages_lisp: /home/leory/udemy_ws/devel/share/common-lisp/ros/udemy_cpp_pkg/srv/OddEvenCheck.lisp
+udemy_cpp_pkg_generate_messages_lisp: /home/leory/udemy_ws/devel/share/common-lisp/ros/udemy_cpp_pkg/srv/Camera.lisp
 udemy_cpp_pkg_generate_messages_lisp: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build.make
 
 .PHONY : udemy_cpp_pkg_generate_messages_lisp

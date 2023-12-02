@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/leory/udemy_ws/build
 include udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/progress.make
 
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py: /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/_OddEvenCheck.py
+udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py: /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/_Camera.py
 udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py: /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/__init__.py
 
 
@@ -62,13 +63,22 @@ udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py: /home/leory/udemy_w
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV udemy_cpp_pkg/OddEvenCheck"
 	cd /home/leory/udemy_ws/build/udemy_cpp_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p udemy_cpp_pkg -o /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv
 
+/home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/_Camera.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/_Camera.py: /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv
+/home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/_Camera.py: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
+/home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/_Camera.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV udemy_cpp_pkg/Camera"
+	cd /home/leory/udemy_ws/build/udemy_cpp_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p udemy_cpp_pkg -o /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv
+
 /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/__init__.py: /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/_OddEvenCheck.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python srv __init__.py for udemy_cpp_pkg"
+/home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/__init__.py: /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/_Camera.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/leory/udemy_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python srv __init__.py for udemy_cpp_pkg"
 	cd /home/leory/udemy_ws/build/udemy_cpp_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv --initpy
 
 udemy_cpp_pkg_generate_messages_py: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py
 udemy_cpp_pkg_generate_messages_py: /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/_OddEvenCheck.py
+udemy_cpp_pkg_generate_messages_py: /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/_Camera.py
 udemy_cpp_pkg_generate_messages_py: /home/leory/udemy_ws/devel/lib/python3/dist-packages/udemy_cpp_pkg/srv/__init__.py
 udemy_cpp_pkg_generate_messages_py: udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_py.dir/build.make
 

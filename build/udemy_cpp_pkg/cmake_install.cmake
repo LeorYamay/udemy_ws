@@ -38,7 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/udemy_cpp_pkg/srv" TYPE FILE FILES "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/udemy_cpp_pkg/srv" TYPE FILE FILES
+    "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/OddEvenCheck.srv"
+    "/home/leory/udemy_ws/src/udemy_cpp_pkg/srv/Camera.srv"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

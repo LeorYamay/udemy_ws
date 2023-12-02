@@ -22,7 +22,7 @@ int main(int argc, char **argv)
         std::cout << "Enter camera angle: ";
         std::cin >> input_num;
 
-        camera_srv.request.number = input_num;
+        camera_srv.request.angle = input_num;
 
         if (input_num == 0)
         {
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
         if (client.call(camera_srv))
         {
             cv_bridge::CvImagePtr cv_ptr;
-            cv_ptr = cv_bridge::toCVCopy(camera_srv.response.camera_image,sensor_msgs::image_encodings::BGR8);
+            cv_ptr = cv_bridge::toCvCopy(camera_srv.response.camera_image,sensor_msgs::image_encodings::BGR8);
             cv::imshow("Robot Camera Image", cv_ptr->image);
             cv::waitKey(1000);
         }

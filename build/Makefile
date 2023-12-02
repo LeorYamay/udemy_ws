@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named camera_client
+
+# Build rule for target.
+camera_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 camera_client
+.PHONY : camera_client
+
+# fast build rule for target.
+camera_client/fast:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_client.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_client.dir/build
+.PHONY : camera_client/fast
+
+#=============================================================================
 # Target rules for targets named service_client
 
 # Build rule for target.
@@ -400,6 +413,19 @@ udemy_cpp_pkg_generate_messages_lisp: cmake_check_build_system
 udemy_cpp_pkg_generate_messages_lisp/fast:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages_lisp.dir/build
 .PHONY : udemy_cpp_pkg_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named udemy_cpp_pkg_gencpp
+
+# Build rule for target.
+udemy_cpp_pkg_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg_gencpp
+.PHONY : udemy_cpp_pkg_gencpp
+
+# fast build rule for target.
+udemy_cpp_pkg_gencpp/fast:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build
+.PHONY : udemy_cpp_pkg_gencpp/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_py
@@ -558,6 +584,19 @@ roscpp_generate_messages_py/fast:
 .PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named camera_server
+
+# Build rule for target.
+camera_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 camera_server
+.PHONY : camera_server
+
+# fast build rule for target.
+camera_server/fast:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/camera_server.dir/build.make udemy_cpp_pkg/CMakeFiles/camera_server.dir/build
+.PHONY : camera_server/fast
+
+#=============================================================================
 # Target rules for targets named _udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck
 
 # Build rule for target.
@@ -595,19 +634,6 @@ rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
 rosgraph_msgs_generate_messages_nodejs/fast:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make udemy_cpp_pkg/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named udemy_cpp_pkg_gencpp
-
-# Build rule for target.
-udemy_cpp_pkg_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 udemy_cpp_pkg_gencpp
-.PHONY : udemy_cpp_pkg_gencpp
-
-# fast build rule for target.
-udemy_cpp_pkg_gencpp/fast:
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_gencpp.dir/build
-.PHONY : udemy_cpp_pkg_gencpp/fast
 
 #=============================================================================
 # Target rules for targets named service_server
@@ -779,19 +805,6 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_cpp
-
-# Build rule for target.
-sensor_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-#=============================================================================
 # Target rules for targets named udemy_cpp_pkg_gennodejs
 
 # Build rule for target.
@@ -843,6 +856,32 @@ udemy_cpp_pkg_generate_messages/fast:
 	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/build.make udemy_cpp_pkg/CMakeFiles/udemy_cpp_pkg_generate_messages.dir/build
 .PHONY : udemy_cpp_pkg_generate_messages/fast
 
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_cpp
+
+# Build rule for target.
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make udemy_cpp_pkg/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _udemy_cpp_pkg_generate_messages_check_deps_Camera
+
+# Build rule for target.
+_udemy_cpp_pkg_generate_messages_check_deps_Camera: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _udemy_cpp_pkg_generate_messages_check_deps_Camera
+.PHONY : _udemy_cpp_pkg_generate_messages_check_deps_Camera
+
+# fast build rule for target.
+_udemy_cpp_pkg_generate_messages_check_deps_Camera/fast:
+	$(MAKE) -f udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/build.make udemy_cpp_pkg/CMakeFiles/_udemy_cpp_pkg_generate_messages_check_deps_Camera.dir/build
+.PHONY : _udemy_cpp_pkg_generate_messages_check_deps_Camera/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -865,6 +904,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... camera_client"
 	@echo "... service_client"
 	@echo "... speed_calc"
 	@echo "... subscriber"
@@ -874,6 +914,7 @@ help:
 	@echo "... udemy_cpp_pkg_generate_messages_nodejs"
 	@echo "... udemy_cpp_pkg_genlisp"
 	@echo "... udemy_cpp_pkg_generate_messages_lisp"
+	@echo "... udemy_cpp_pkg_gencpp"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_cpp"
@@ -886,10 +927,10 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... camera_server"
 	@echo "... _udemy_cpp_pkg_generate_messages_check_deps_OddEvenCheck"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... udemy_cpp_pkg_gencpp"
 	@echo "... service_server"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_eus"
@@ -903,11 +944,12 @@ help:
 	@echo "... udemy_cpp_pkg_geneus"
 	@echo "... udemy_cpp_pkg_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... udemy_cpp_pkg_gennodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... udemy_cpp_pkg_generate_messages"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... _udemy_cpp_pkg_generate_messages_check_deps_Camera"
 .PHONY : help
 
 

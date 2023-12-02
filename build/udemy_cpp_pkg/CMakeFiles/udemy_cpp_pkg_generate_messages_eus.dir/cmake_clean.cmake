@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/manifest.l"
+  "/home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv/Camera.l"
   "/home/leory/udemy_ws/devel/share/roseus/ros/udemy_cpp_pkg/srv/OddEvenCheck.l"
   "CMakeFiles/udemy_cpp_pkg_generate_messages_eus"
 )

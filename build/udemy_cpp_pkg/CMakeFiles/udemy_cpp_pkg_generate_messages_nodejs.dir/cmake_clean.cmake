@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/leory/udemy_ws/devel/share/gennodejs/ros/udemy_cpp_pkg/srv/Camera.js"
   "/home/leory/udemy_ws/devel/share/gennodejs/ros/udemy_cpp_pkg/srv/OddEvenCheck.js"
   "CMakeFiles/udemy_cpp_pkg_generate_messages_nodejs"
 )
