@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 {
     ros::init(argc,argv, "camera_service_client_node");
     ros::NodeHandle node_handle;
-    ros::ServiceClient client = node_handle.serviceClient<udemy_cpp_pkg::Camera>("camera");
+    ros::ServiceClient client = node_handle.serviceClient<udemy_cpp_pkg::Camera>("camera_service");
 
     udemy_cpp_pkg::Camera camera_srv;
     int input_num;
@@ -28,8 +28,9 @@ int main(int argc, char **argv)
         {
             ROS_INFO("Exiting application...");
             return 0;
-        }
-
+        }   
+        std::cout << "tania: ";
+        std::cout << std::to_string(client.call(camera_srv))<<std::endl;
         if (client.call(camera_srv))
         {
             cv_bridge::CvImagePtr cv_ptr;
